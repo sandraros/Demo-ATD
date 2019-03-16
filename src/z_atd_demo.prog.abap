@@ -861,7 +861,7 @@ CLASS ltc_atd_max_test_doubles IMPLEMENTATION.
             INNER JOIN repoload
               ON concat( rpad( seoclass~clsname, 30, '=' ), 'IP' ) = repoload~progname
           WHERE seoclass~clstype = '1'
-            AND seoclass~clsname LIKE 'IF_ADT_%'
+            AND seoclass~clsname LIKE 'IF_%'
             AND ( repoload~udat > repoload~sdat OR
                 ( repoload~udat = repoload~sdat AND repoload~utime >= repoload~stime ) )
           INTO TABLE @DATA(interfaces)
